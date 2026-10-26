@@ -1,13 +1,15 @@
+require("dotenv").config(); // TÄMÄN ON OLTAVA RIVILLÄ 1!
 const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("path");
 const bcrypt = require("bcrypt");
-require("dotenv").config();
 
 const app = express();
 const PORT = 3000;
 
 const oikeaHash = process.env.PASSWORD_HASH;
+
+
 
 const session = require("express-session");
 
